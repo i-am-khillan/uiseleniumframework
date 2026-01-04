@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Testng Regressuib Suite" verbose="3" >
+ <!--thread-count="3" parallel="tests">-->
+	
+<listeners>
+<!--<listener class-name="com.qa.opercart.listeners.ExtentListenerReports"></listener>
+-->
+<listener class-name="com.qa.opercart.listeners.ExtentListenerReports"></listener>
+<listener class-name="com.qa.opercart.listeners.TestAllureListener"></listener>
+<listener class-name="com.qa.opercart.listeners.AnnotationTransformer"></listener>
+
+</listeners>
+	<test name="Google Test">
+		<parameter name="url" value="https://www.google.com"></parameter>
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="headless" value="false"></parameter>
+		<classes>
+			<class name="testngConcept.GoogleTest" />
+		</classes>
+	</test> <!--
+	Test -->
+
+	<test name="OpenCartLogin Test">
+		<parameter name="url"
+			value="https://naveenautomationlabs.com/opencart/index.php?route=account/login"></parameter>
+<!--		<parameter name="browser" value="edge"></parameter>
+-->		<parameter name="headless" value="true"></parameter>
+		<classes>
+			<class name="testngConcept.OpenCartLoginTest" />
+		</classes>
+
+	</test> <!--
+	Test -->
+	<!--<test name="OrganHRM Test">
+		<parameter name="url"
+			value="https://www.orangehrm.com/en/30-day-free-trial"></parameter>
+		<parameter name="browser" value="firefox"></parameter>
+		<parameter name="headless" value="false"></parameter>
+		<classes>
+			<class name="testngConcept.OrganHRMTest" />
+		</classes>
+	</test> 
+	Test -->
+
+</suite> <!--
+Suite -->
