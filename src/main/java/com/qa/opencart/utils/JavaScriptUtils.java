@@ -26,7 +26,7 @@ public class JavaScriptUtils {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].style.backgroundColor='" + color + " '", element);
 		try {
-			Thread.sleep(20);
+			Thread.sleep(5);
 		} catch (InterruptedException e) {
 
 		}

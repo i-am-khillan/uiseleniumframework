@@ -42,7 +42,7 @@ public class RegistrationPageTest extends BaseTest {
 	public void userRegistrationPageTest(String firstName, String lastName, String telephone, String password,
 			String subcribe) {
 		Assert.assertTrue(registrationPage.userRegistrationPage(firstName, lastName, StringUtils.getRandomEmailId(),
-				"9098989876", password, subcribe));
+				telephone, password, subcribe));
 	}
 
 }

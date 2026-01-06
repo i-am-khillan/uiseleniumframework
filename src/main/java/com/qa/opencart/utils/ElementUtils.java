@@ -60,8 +60,6 @@ public class ElementUtils {
 		} catch (NoSuchElementException e) {
 			System.out.println("Element is not present on the page ");
 			e.printStackTrace();
-			return null;
-
 		}
 		return element;
 

@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Open cart Regression Suite" verbose="3" thread-count="5"
-	parallel="tests">
-<listeners>
-<!--<listener class-name="com.qa.opercart.listeners.ExtentListenerReports"></listener>
+<suite name="Open cart Regression Suite" verbose="3">
+	<!-- thread-count="5"	parallel="tests">
 -->
-<listener class-name="com.qa.opercart.listeners.ExtentListenerReports"></listener>
-<listener class-name="com.qa.opercart.listeners.TestAllureListener"></listener>
-<listener class-name="com.qa.opercart.listeners.AnnotationTransformer"></listener>
+	<listeners>
+		<!--<listener class-name="com.qa.opercart.listeners.ExtentListenerReports"></listener>
+-->
+		<listener class-name="com.qa.opercart.listeners.ExtentListenerReports"></listener>
+		<listener class-name="com.qa.opercart.listeners.TestAllureListener"></listener>
+		<listener class-name="com.qa.opercart.listeners.AnnotationTransformer"></listener>
 
-</listeners>
+	</listeners>
 
 	<test name="LoginPage Test">
 		<!--<parameter name="url" value="https://www.google.com"></parameter>
@@ -48,6 +49,7 @@
 			<class name="com.qa.opencart.tests.RegistrationPageTest" />
 		</classes>
 	</test>
+
 	<!-- Test -->
 	<!-- Test -->
 </suite> <!--
