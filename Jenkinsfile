@@ -31,7 +31,7 @@ pipeline {
             steps {
                 echo 'Run regression test cases on QA'
                 git 'https://github.com/i-am-khillan/uiseleniumframework.git'
-                bat "mvn clean test -Dsurefire.suiteXmlFiles=/src/test/resources/testrunner/sanity_chrome.xml"
+                bat "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunner/sanity_chrome.xml"
             }
         }
 
@@ -72,14 +72,14 @@ pipeline {
             steps {
                 echo 'Run regression test cases on QA'
                 git 'https://github.com/i-am-khillan/uiseleniumframework.git'
-                bat "mvn clean test -Dsurefire.suiteXmlFiles=/src/test/resources/testrunner/sanity_chrome.xml"
+                bat "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunner/sanity_chrome.xml"
             }
         }
          stage('Run smoke Test Cases on QA') {
             steps {
                 echo 'Run regression test cases on QA'
                 git 'https://github.com/i-am-khillan/uiseleniumframework.git'
-                bat "mvn clean test -Dsurefire.suiteXmlFiles=/src/test/resources/testrunner/sanity_chrome.xml"
+                bat "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunner/sanity_chrome.xml"
             }
         }
 
