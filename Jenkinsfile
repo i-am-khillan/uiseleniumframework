@@ -13,7 +13,7 @@ pipeline {
             }
             post
             { 
-				sucess{
+				success{
 					junit '**/target/surefire-reports/TEST-*.xml'
 					archiveArtifacts 'target/*.jar'
 				}
@@ -49,7 +49,7 @@ pipeline {
             }
         }
 
-        stage('Publish Extent Report') {
+        stage('Publish Extent Reports') {
             steps {
                 	publishHTML([allowMissing: false,
                 	alwaysLinkToLastBuild: false,
@@ -68,14 +68,14 @@ pipeline {
             }
         }
         
-        stage('Run Regression Test Cases on QA') {
+        stage('Run sanity Test Cases on QA') {
             steps {
                 echo 'Run regression test cases on QA'
                 git 'https://github.com/i-am-khillan/uiseleniumframework.git'
                 bat "maven clean test -Dsurefire.suiteXmlFiles=/src/test/resources/testrunner/sanity_chrome.xml"
             }
         }
-         stage('Run Regression Test Cases on QA') {
+         stage('Run smoke Test Cases on QA') {
             steps {
                 echo 'Run regression test cases on QA'
                 git 'https://github.com/i-am-khillan/uiseleniumframework.git'
@@ -83,7 +83,7 @@ pipeline {
             }
         }
 
-        stage('Publish Allure reports') {
+        stage('Publish Allure reports for Test') {
             steps {
 				script{
 					allure([
